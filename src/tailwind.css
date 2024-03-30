@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.a {
+    @apply absolute w-[500px] h-[250px]
+}

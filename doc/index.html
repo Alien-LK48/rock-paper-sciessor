@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/tailwind.css">
+    <title>Document</title>
+</head>
+<body class="bg-black text-white">
+    <section class="flex">
+        <div class=" h-[500px] w-[800px] flex justify-center ml-[230px] mt-[50px]">
+            <div>
+                <div class="text-4xl mt-[20px] text-center mb-[20px] ml-[100px] uppercase">rock paper sciessor</div>
+                <div id="res" class="w-[500px] h-[100px] ml-[105px] mb-[10px] hidden">
+                </div>
+                <div id="videos" class="relative mb-[15px] ml-[100px]">
+                    <video id="vid" src="meterials/shake.mp4" class="a"></video>
+                    <video id="win" class="hidden a " src="meterials/win.mp4"></video>
+                    <video id="lose" class="hidden a " src="meterials/lose.mp4"></video>
+                    <video id="draw" class="hidden a " src="meterials/draw.mp4"></video>
+                </div>
+                <div class="ml-[185px]">
+                    <button onclick="rock()"><img src="meterials/rock.png" alt="" class=""></button>
+                    <button onclick="paper()"><img src="meterials/paper.png" alt="" ></button>
+                    <button onclick="sciessor()"><img src="meterials/sciessor.png" alt="" ></button>
+                </div>
+            </div>
+        </div>
+        <div class="mt-[200px]">
+            <div id="score" class=" border-2 border-white w-[100px] h-[100px] pt-[15px] pl-[10px]">Wins: 0 <br> Losses: 0 <br> Draws: 0</div>
+        </div>
+        
+    </section>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
