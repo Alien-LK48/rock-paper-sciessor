@@ -1,6 +1,6 @@
-let wins = 0;
-let losses = 0;
-let draws = 0;
+let wins = parseInt(localStorage.getItem('wins')) || 0;
+let losses = parseInt(localStorage.getItem('losses')) || 0;
+let draws = parseInt(localStorage.getItem('draws')) || 0;
 
 function countPoints(result) {
     if (result.includes("win")) {
@@ -10,7 +10,13 @@ function countPoints(result) {
     } else {
         draws++;
     }
+    updateScore();
+}
+function updateScore() {
     document.getElementById("score").innerHTML = `Wins: ${wins} <br> Losses: ${losses} <br> Draws: ${draws}`;
+    localStorage.setItem('wins', wins);
+    localStorage.setItem('losses', losses);
+    localStorage.setItem('draws', draws);
 }
 
 let video = document.getElementById('vid');
@@ -124,4 +130,4 @@ function paper(){
         }, 3000);
         }
 
- 
+    updateScore()
